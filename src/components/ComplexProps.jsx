@@ -12,7 +12,7 @@ function UserProfileCard({user, theme, actions}){
         </div>
         <div>
           <h2 className="text-black text-xl font-bold">{user.name}</h2>
-          <p className="text-gray-300">{user.email}</p>
+          <p className="text-gray-500">{user.email}</p>
           <div className="p-3 space-x-2">
             <span className={`px-3 text-center text-gray-500 py-2 rounded-2xl ${theme.avatarBg}`}>{user.role}</span>
             <span className={`px-3 text-center text-gray-500 py-2 rounded-2xl ${theme.avatarBg}`}>{user.status}</span>
