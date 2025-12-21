@@ -88,9 +88,9 @@ function RefProps() {
           </div>
         </div>
       </div>
-      <div className="bg-yellow-100 border-l-4 border-yellow-500 rounded-xl mt-4 p-4">
+      <div className="bg-yellow-100 border-l-4 border-yellow-500 shadow-md rounded-xl mt-4 p-4">
         <h3 className="text-xl font-bold mb-2">When to use refs: </h3>
-        <ul className="list-disc list-inside space-y-1">
+        <ul className="list-disc list-inside space-y-1 font-medium">
           <li>Managing focus, text selection, Media playback</li>
           <li>Trigerring imperative animations</li>
           <li>Integrating with third-party DOM libraries</li>
