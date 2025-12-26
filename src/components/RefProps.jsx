@@ -56,7 +56,7 @@ function RefProps() {
 
 
   return (
-    <div className="bg-gray-100 p-6 rounded-xl">
+    <div className="bg-gray-100 p-6 rounded-xl shadow-md">
       <h1 className="text-4xl font-bold mb-4">Ref Props</h1>
       <p className="font-medium mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, nostrum.</p>
       <div className="bg-blue-100 shadow-md p-4 rounded-xl">

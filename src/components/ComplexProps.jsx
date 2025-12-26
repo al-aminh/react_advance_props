@@ -109,7 +109,7 @@ function ComplexProps() {
   ] 
 
   return (
-    <div className="bg-gray-100 p-6 rounded-xl">
+    <div className="bg-gray-100 p-6 rounded-xl shadow-md">
       <h2 className="text-4xl font-bold mb-4">Complex/Nested Props</h2>
       <p className="font-medium mb-4"> Complex props allows you to pass nested objects and functions, enabling component configuration and interaction</p>
       <div className="space-y-4">

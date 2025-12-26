@@ -31,7 +31,7 @@ function Container({ children, layout="vertical"}){
 
 function ChildrenProps() {
   return (
-    <section className="bg-white p-6 rounded-xl">
+    <section className="bg-gray-100 shadow-md p-6 rounded-xl">
       <h1 className="font-bold text-5xl mb-4">Children Props</h1>
       <p className="font-medium mb-4"> 
       The children prop is a special prop in React that allows you to pass components or elements as the content between the opening and closing tags of a component. This is useful for creating reusable components that can wrap other components or elements, providing a consistent structure or styling while allowing for flexible content.

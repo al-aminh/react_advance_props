@@ -2,7 +2,8 @@ import BasicProps from "./components/BasicProps.jsx";
 import ChildrenProps from "./components/ChildrenProps.jsx";
 import RefProps from "./components/RefProps.jsx";
 import ComplexProps from "./components/ComplexProps.jsx";
-import ThemeToggler from "./components/ThemeToggler.jsx";
+import ThemeToggler, { useTheme } from "./components/ThemeToggler.jsx";
+import { ThemeProvider } from "./components/ThemeToggler.jsx";
 
 function Navigation() {
   const isDark = true;
@@ -58,19 +59,24 @@ function Navigation() {
 }
 
 function AppContent() {
-  const isDark = true;
+  const {isDark} = useTheme();
   return (
-    <div className="bg-gray-800 min-h-screen">
+    <div className={` min-h-screen ${isDark? "bg-gray-800": "bg-white"}`}>
       <Navigation />
       <div className="container mx-auto px-4 py-8">
-        <header className={`text-center mb-12 transition-colors ${isDark ? "text-white" : "text-gray-800"}`}>
+        <header
+          className={`text-center mb-12 transition-colors ${
+            isDark ? "text-white" : "text-gray-800"
+          }`}
+        >
           <h1 className="text-5xl font-bold mb-4">
             Welcome to the React Props Documentation
           </h1>
           <p
             className={`text-xl ${isDark ? "text-gray-300" : "text-gray-600"}`}
           >
-            Explore various types of props in React including basic props, children props, ref props, complex props, and theme props.
+            Explore various types of props in React including basic props,
+            children props, ref props, complex props, and theme props.
           </p>
         </header>
         <div className="space-y-8">
@@ -96,7 +102,11 @@ function AppContent() {
 }
 
 function App() {
-  return <AppContent />;
+  return (
+    <ThemeProvider>
+      <AppContent />;
+    </ThemeProvider>
+  );
 }
 
 export default App;
